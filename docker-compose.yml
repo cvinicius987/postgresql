@@ -12,25 +12,7 @@ services:
     networks:
       - postgres-network
 
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    ports:
-      - "8000:80"
-    volumes:
-      - pgadmin-data:/root/.pgadmin
-    depends_on:
-      - postgres
-    networks:
-      - postgres-network
-
-volumes:
-  postgres-data:
-  pgadmin-data:
-
+volumes: postgres-data
 
 networks:
   postgres-network:

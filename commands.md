@@ -6,6 +6,6 @@ docker exec -it postgres psql -U postgres
 
 ## PostgreSQL
 
-in psql:
+### Current connection
 
 \conninfo
