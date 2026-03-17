@@ -12,7 +12,8 @@ services:
     networks:
       - postgres-network
 
-volumes: postgres-data
+volumes:
+  postgres-data
 
 networks:
   postgres-network:
